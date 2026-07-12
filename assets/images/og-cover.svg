@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Project74 social preview</title>
+  <desc id="desc">Project74 name and brand message on a midnight navy civic archive design.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06131f"/><stop offset=".6" stop-color="#0a1d2e"/><stop offset="1" stop-color="#071726"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="965" cy="315" r="225" fill="none" stroke="#43cde6" stroke-opacity=".16" stroke-width="2"/>
+  <circle cx="965" cy="315" r="165" fill="none" stroke="#d2b37d" stroke-opacity=".22" stroke-width="2"/>
+  <path d="M820 420h290M850 390h230M875 235l90-45 90 45zM900 250v140M945 250v140M985 250v140M1030 250v140" fill="none" stroke="#d2b37d" stroke-opacity=".65" stroke-width="6"/>
+  <circle cx="132" cy="120" r="52" fill="none" stroke="#d2b37d" stroke-width="2"/>
+  <text x="132" y="134" text-anchor="middle" fill="#d2b37d" font-family="Georgia,serif" font-size="34" font-weight="700">74</text>
+  <text x="80" y="278" fill="#f5f0e6" font-family="Georgia,serif" font-size="84">Project74</text>
+  <text x="82" y="347" fill="#d2b37d" font-family="Arial,sans-serif" font-size="25" font-weight="700" letter-spacing="4">CIVIC ARCHIVE &amp; PUBLIC EDUCATION</text>
+  <text x="82" y="450" fill="#b7c2c6" font-family="Arial,sans-serif" font-size="29">The legacy that keeps fighting for you.</text>
+</svg>
