@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Historical image placeholder</title>
+  <desc id="desc">A stylized courthouse-inspired placeholder that must be replaced with an approved historical image.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#132d40"/><stop offset="1" stop-color="#071726"/></linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0V60" fill="none" stroke="#ffffff" stroke-opacity=".04"/></pattern>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#grid)"/>
+  <circle cx="600" cy="350" r="230" fill="none" stroke="#43cde6" stroke-opacity=".18" stroke-width="2"/>
+  <path d="M290 690h620M350 650h500M390 320l210-105 210 105zM425 350h350M445 350v300M520 350v300M680 350v300M755 350v300" fill="none" stroke="#d2b37d" stroke-opacity=".65" stroke-width="10"/>
+  <rect x="420" y="650" width="360" height="18" fill="#d2b37d" fill-opacity=".5"/>
+  <text x="600" y="770" fill="#f5f0e6" font-family="Arial,sans-serif" font-size="28" text-anchor="middle" letter-spacing="5">APPROVED HISTORICAL IMAGE REQUIRED</text>
+  <text x="600" y="815" fill="#aab6ba" font-family="Arial,sans-serif" font-size="19" text-anchor="middle">Replace with credited media and verified caption</text>
+</svg>
