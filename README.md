@@ -1,21 +1,30 @@
-# Project74 — Civic Archive Static Website
+# Project74 — Civic Archive Website
 
 A complete responsive static website for **Project74**, designed as a premium civic archive, digital museum and public education platform.
 
-> **Important content notice:** All timeline events, archive cards, featured stories, image captions and downloadable resources included in this starter are clearly labeled samples. They must not be represented as authentic or verified historical materials. Replace them only with official content approved by the Project74 client.
+> **Historical-content notice:** Every timeline event, archive card, document preview, image caption and download included here is clearly labeled sample content. Nothing in this starter should be presented as an authentic historical record. Replace samples only with official, verified and client-approved materials.
+
+## Live deployment
+
+After GitHub Pages is enabled, the public address will be:
+
+`https://sackoconcept8-prog.github.io/project74/`
 
 ## Technology
 
 - HTML5
 - CSS3
 - Vanilla JavaScript
-- No backend, database, Node server or paid service required
-- Ready for GitHub Pages
+- No backend, database, Node server or paid service
+- Relative paths compatible with a GitHub Pages project subdirectory
+- Responsive desktop, tablet and mobile layouts
+- Reduced-motion support and keyboard-visible focus states
 
 ## Project structure
 
 ```text
 project74/
+├── .nojekyll
 ├── index.html
 ├── styles.css
 ├── script.js
@@ -34,179 +43,120 @@ project74/
         └── og-cover.svg
 ```
 
+## Enable GitHub Pages
+
+1. Open this repository on GitHub.
+2. Select **Settings**.
+3. Open **Pages** in the left menu.
+4. Under **Build and deployment**, choose **Deploy from a branch**.
+5. Select branch **main** and folder **/ (root)**.
+6. Select **Save**.
+7. Wait for GitHub to display the published address.
+
+The repository already contains `index.html`, `.nojekyll`, the final sitemap URL and relative asset paths.
+
 ## Preview locally
 
-Open `index.html` directly in a browser, or run a simple local server from the project folder:
+Open `index.html` directly, or run:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
+Then visit `http://localhost:8000`.
 
-## Deploy to GitHub Pages
+## Replace official content
 
-1. Create a new GitHub repository, for example `project74`.
-2. Upload every file and folder in this project to the repository root.
-3. In GitHub, open **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Choose the `main` branch and the `/ (root)` folder.
-6. Select **Save**.
-7. GitHub will publish the site at a URL similar to:
-   `https://YOUR-USERNAME.github.io/project74/`
-
-All site paths are relative, so the website works from a GitHub Pages project subdirectory.
-
-## Replace website content
-
-### Brand and navigation
+### Main text and contact details
 
 Edit `index.html` to replace:
 
-- Project74 summary and mission copy
-- Navigation labels if needed
-- Email address
-- Social media placeholder links
-- Accessibility and privacy language
+- mission and historical narrative
+- approved quotation and source
+- Project74 email address
+- social media placeholder links
+- accessibility and privacy wording
 
-### Historical narrative
-
-Find the section with `id="history"` in `index.html`. Replace the placeholder narrative only with approved, sourced content. Add source notes and image credits where appropriate.
+The placeholder email also appears in the JSON-LD metadata and in `script.js` as `CONTACT_EMAIL`.
 
 ### Timeline
 
-Each `.timeline-event` button in `index.html` contains these data attributes:
+Timeline samples are stored in the `timelineData` array near the top of `script.js`. Each item contains:
 
-- `data-date`
-- `data-title`
-- `data-description`
-- `data-source`
+- `date`
+- `title`
+- `text`
+- `source`
 
-Replace every sample value with verified information. Keep the button structure unchanged so the JavaScript interaction continues to work.
+Replace every item with verified dates, descriptions and citations. Keep sample labels visible until the official review is complete.
 
-### Archive items
+### Archive explorer
 
-Each `.archive-card` contains:
+Archive cards are stored in the `archiveData` array in `script.js`. Each entry contains:
 
-- `data-category` for filtering
-- `data-search` for search keywords
-- image and alt text
-- year or date
+- year or date label
 - category
 - title
-- short description
-- preview button metadata
+- description
 
-To add an item, duplicate a complete `.archive-card`, update its content and make sure `data-category` exactly matches one of the filter button values.
+The available filters are stored in the `categories` array. Category wording must match exactly for filtering to work.
 
-This starter uses a static HTML collection. For a larger archive, a future version could load a local JSON file while remaining compatible with GitHub Pages.
+The current archive uses eight sample items. Search, filtering, result counts, the empty state and document-preview dialog are implemented in vanilla JavaScript.
 
 ### Images
 
-Replace the SVG placeholders in `assets/images/` with approved, optimized images.
-
-Recommended formats:
+Replace files in `assets/images/` with approved optimized media. Recommended formats:
 
 - AVIF or WebP for photographs
 - SVG for logos and simple illustrations
-- JPG fallback when needed
+- JPG when a fallback is required
 
-Keep image files reasonably small, preserve width and height attributes, use `loading="lazy"` below the fold, and write accurate alt text for meaningful images.
+Keep accurate alt text, image credits and verified captions. Use `loading="lazy"` for images below the first screen.
 
-### Educational downloads
+### Educational resources
 
-Replace `assets/documents/project74-resource-placeholder.txt` with approved accessible PDFs. Then update each download link in `index.html`.
+Replace `assets/documents/project74-resource-placeholder.txt` with accessible, approved PDF documents and update the links in `index.html`.
 
-Accessible PDFs should include:
+Accessible PDFs should have selectable text, logical reading order, document headings, descriptive links, alternative text and sufficient contrast.
 
-- selectable text
-- logical reading order
-- headings and document tags
-- descriptive link text
-- image alternative text
-- sufficient color contrast
+## Contact form
 
-## Contact form options
+The current form uses a mailto fallback and stores no submissions.
 
-### Current mailto fallback
-
-The contact form currently opens the visitor’s email application.
-
-In `script.js`, replace:
+Replace this line in `script.js`:
 
 ```js
-const CONTACT_EMAIL = 'hello@project74.example';
+CONTACT_EMAIL='hello@project74.example'
 ```
 
-Also replace the same placeholder email in `index.html` and the JSON-LD metadata.
+Also replace the same placeholder email in `index.html`.
 
-### Optional Formspree connection
+Formspree can be connected later by adding its endpoint to the form and adapting or removing the mailto submit handler. Review the service’s current privacy terms and data handling before launch.
 
-Formspree can be connected later without a custom backend:
+## SEO
 
-1. Create a Formspree form and copy its endpoint.
-2. In `index.html`, add the endpoint to the form:
+The following are already included:
 
-```html
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-```
-
-3. Remove or adapt the mailto submit handler in the contact-form section of `script.js`.
-4. Add a reviewed privacy statement explaining the third-party form processor.
-
-Project74 should review Formspree’s current pricing, privacy terms and data handling before enabling it.
-
-## SEO setup
-
-Before launch, update in `index.html`:
-
-- page title
-- meta description
-- Open Graph image and metadata
+- professional page title and description
+- Open Graph metadata
 - Twitter card metadata
-- schema `url`
-- organization email
+- favicon
+- WebSite JSON-LD
+- `robots.txt`
+- `sitemap.xml`
 
-The included schema URL is a placeholder:
+Before a custom-domain launch, update the canonical public URLs in `index.html`, `robots.txt` and `sitemap.xml`.
 
-```text
-https://example.github.io/project74/
-```
+## Accessibility review before launch
 
-Replace it with the final public URL.
-
-### robots.txt
-
-Update the sitemap URL in `robots.txt` after deployment.
-
-### sitemap.xml
-
-Update the `<loc>` URL in `sitemap.xml` after deployment. Update `<lastmod>` when major public content changes.
-
-## Accessibility checklist before launch
-
-- Verify all official images have accurate alt text or empty alt attributes when decorative.
-- Add captions and source credits to archival media.
-- Test every page section using keyboard navigation only.
+- Test the full site using only a keyboard.
 - Test at 200% browser zoom.
+- Review official media alt text and captions.
+- Confirm all downloadable PDFs are accessible.
 - Run a screen-reader review.
-- Confirm PDFs are accessible.
-- Confirm contrast after any brand color changes.
-- Keep motion optional and test `prefers-reduced-motion`.
-- Avoid opening new windows without warning.
+- Recheck contrast after brand changes.
+- Preserve `prefers-reduced-motion` support.
 
-## Performance checklist
+## Rights and verification
 
-- Compress production images.
-- Avoid embedding full-resolution archival scans directly in card thumbnails.
-- Use smaller preview images and link to optimized document viewers or downloads.
-- Keep third-party scripts to a minimum.
-- Add analytics only after privacy review.
-
-## Custom domain
-
-A custom domain can be connected from **Settings → Pages → Custom domain**. GitHub may create a `CNAME` file automatically. Update all SEO URLs and the sitemap after the domain is active.
-
-## License and rights
-
-No rights are claimed over future Project74 historical materials. Before publishing any document, image, transcript or oral history, confirm ownership, permission, privacy considerations, source attribution and usage rights.
+No rights are claimed over future Project74 historical materials. Before publishing any document, photograph, transcript, oral history or family record, confirm authenticity, ownership, permission, privacy considerations, source attribution and usage rights.
