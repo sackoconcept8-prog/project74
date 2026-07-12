@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title id="title">Archive item sample placeholder</title>
+  <desc id="desc">A decorative document layout indicating that no authentic archive scan is attached.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#18344a"/><stop offset="1" stop-color="#0a1d2e"/></linearGradient>
+  </defs>
+  <rect width="900" height="600" fill="url(#bg)"/>
+  <circle cx="760" cy="95" r="170" fill="none" stroke="#43cde6" stroke-opacity=".12" stroke-width="2"/>
+  <g transform="translate(175 80) rotate(-4 270 220)">
+    <rect x="0" y="0" width="550" height="440" rx="14" fill="#f5f0e6" fill-opacity=".92"/>
+    <circle cx="76" cy="78" r="38" fill="none" stroke="#b08a52" stroke-width="4"/>
+    <text x="76" y="87" text-anchor="middle" fill="#73562f" font-family="Georgia,serif" font-size="23" font-weight="700">P74</text>
+    <rect x="145" y="52" width="300" height="16" rx="8" fill="#14283a" fill-opacity=".25"/>
+    <rect x="145" y="82" width="220" height="10" rx="5" fill="#14283a" fill-opacity=".13"/>
+    <rect x="55" y="150" width="440" height="11" rx="5" fill="#14283a" fill-opacity=".17"/>
+    <rect x="55" y="181" width="400" height="11" rx="5" fill="#14283a" fill-opacity=".17"/>
+    <rect x="55" y="212" width="455" height="11" rx="5" fill="#14283a" fill-opacity=".17"/>
+    <rect x="55" y="243" width="330" height="11" rx="5" fill="#14283a" fill-opacity=".17"/>
+    <rect x="55" y="308" width="180" height="58" rx="8" fill="#b08a52" fill-opacity=".18"/>
+    <text x="145" y="342" text-anchor="middle" fill="#73562f" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="2">SAMPLE ONLY</text>
+  </g>
+</svg>
